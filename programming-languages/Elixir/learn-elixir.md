@@ -4,22 +4,25 @@
 This is an Introductory course on Elixir. It covers all the basics required  to understand the Phoenix web framework andstart using Elixir in your orojects.
 
 ***Why Elixir***?
-**Scalable:** Elixir 1seasily scalable.
-**Fault-tolerant:**  enables a system to continue operating properly in the event of the failure of some of its components.
+**Scalable:** Elixir is easily scalable.
+**Fault-tolerant:**  Enables a system to continue operating properly in the event of the failure of some of its components.
+**Functional:** The functional paradigm is really good for many use cases. Elixir is a purely functional programming language. 
+**Built on top of the Erlang ecosystem:** Erlang is a mature programming language with a lot of libraries. Extending your Elixir project with these libraries is very easy.
+
 
 ## Contents
 
 ### Community   
 The Elixir Community has a total of about 18000 users in all
 #### Global 
-Getting in touch with the gloabl community:
+Getting in touch with the global community:
 
 - [the freenode IRC](http://freenode.net) channel: #elixir-lang
 - [The Elixir Forum](http://elixirforum.com)
 - [On Slack](http://elixir-lang.slack.com)
 
 #### At Coderplex
-The current community at Coderplex us limited to 3 people - [@anandpotukuchi](https://twitter.com/anandpotukuchi) , [@akhilpotukuchi](https://twitter.com/AkhilPotukuchi), [niveshkrishna](https://twitter.com/vniveshkrishna).
+The current community at Coderplex is limited to 3 people - [@anandpotukuchi](https://twitter.com/anandpotukuchi) , [@akhilpotukuchi](https://twitter.com/AkhilPotukuchi), [niveshkrishna](https://twitter.com/vniveshkrishna).
 
 #### Course Details
 
@@ -47,21 +50,20 @@ The only prerequisites for this course are to able to access the internet and a 
 
 The interactive mode runs in the command line. Use the `iex` command.
 
->Windows users are requeisted to navigtte to the `bin` folder and click on `iex.bat`
+>Windows users are required to navigate to the `bin` folder and click on `iex.bat`
 
 ### Running Elixir scripts
 
-Running an ekxixr script in the command line is simple. Use 'elixir' followed by the file name.
+Compiling an elixir file in the command line is simple. Use 'elixir' followed by the file name.
+Likewise, running an elixir script requires you to use 'elixir' followed by the script name.
 
-> Note that elixir files end with the **.ex** and **.exs** extensions
+> Note that elixir files end with the **.ex** and scripts end with the **.exs** extensions
 
 **Example**
 
->Open the .exs file with your favorite editor In this we wil be using the Linux Command Line
+>Open the .exs file with your favorite editor
 
 
-
-`$ nano hello.exs`
 
 **hello.exs**
 ```
@@ -87,7 +89,7 @@ true
 1 === 0
 false
 ```
-**Strings:** String are encoded in "UTF-8" and are placed in double quotes.
+**Strings:** Strings are encoded in "UTF-8" and are placed in double quotes.
 
 ```
 iex> "hello world"
@@ -98,7 +100,7 @@ It is also possible to interpolate two strings.
 ```
 iex> "hello, My name is #{:Anand}"
 ``` 
->String interpolation cna be poerforme d with variables also.  Using the IO.puts, we can output values of variables.
+>String interpolation can be performed with variables also. Using the IO.puts, we can output values of variables.
 
 **Atoms:** Atoms are constants whose value is the same is the name.
 
@@ -112,6 +114,7 @@ You can also compare two atoms aginst each other
 iex> :hello == :hello
 true
 iex> :hello == :world
+false
 ```
 ### Operators
 Elixir supoorts the basic operators `+,-,*,/` 
@@ -127,14 +130,14 @@ iex> 2/3
 0.6666666666666666
 ```
 
-#### Other data typese list into
+#### Other data types
 **Lists**
-Elixir supports lists of values of different data types called **lists**
+Elixir supports **lists** of values of different data types
 ```
 iex> [1, 2, true, 3]
 [1, 2, true, 3]
 ```
-It is posssible to assign lists to variables
+It is possible to assign lists to variables
 https://data.world/datasets/gis
 ```
 iex> list = [2, 2/3, true, A]
@@ -182,7 +185,7 @@ case 1 do
 ..> end
 "success"
 ```
-> If a match isn't found, the compiler throws a case c;ause error:
+> If a match isn't found, the compiler throws a case clause error:
 
 `** (CaseClauseError) no case clause matching: 1`
 
@@ -201,7 +204,7 @@ iex> cond do
 
 ```
 #### If and unless
-The if macro is used whenthere is only one condition to be evaluated.
+The if macro is used when there is only one condition to be evaluated.
 
 ```
 if 2  + 4 == 6 do 
@@ -210,7 +213,7 @@ if 2  + 4 == 6 do
 " This evaluates to true"
 
 ```
-The unless macro is used to evaluaate the statement and perform the operations if the statement evalueates false.
+The unless macro is used to evaluate the statement and perform the operations if the statement evaluates to false.
 
 ```
 unless 2 == 4 do
@@ -220,7 +223,7 @@ unless 2 == 4 do
 
 ```
 
-> The if and sunless support else statements also.
+> The if and unless support else statements also.
 
 ### Keyword Lists
 A keyword list is a list of tuples. A tuple contains two items - the first , a **key** and the second a **value**.
@@ -258,10 +261,10 @@ Groups of functions are called **modules**
 
 ```
 iex> defmodule Operations do
-..> def add(4,2) do
+..> def add(a, b) do
 ..> a + b
 ..> end
-..> def sub(a.b) do
+..> def sub(a, b) do
 ..> a - b
 ..> end
 
@@ -274,7 +277,7 @@ Anonymous functions require only parameters.
 They start with `fn` and end with `end`
 
 ```
-iex> add = fn a.b -> 3 + 5 
+iex> add = fn a,b -> 3 + 5 
 ```
 ## Recursion
 Like many other functional programming languages, Elixir uses recursion instead of loops.
@@ -317,17 +320,17 @@ require Module
 `
 import Module
 `
-**Use** macro is used to bring i external functionality into the mpodule
+**Use** macro is used to bring in external functionality into the module
 
 `
 use Module
 `
 
-Elixir lets nested modules
+Elixir lets you use nested modules
 
 `
 defmodule A do
-  defmooduke B do
+  defmodule B do
   end
 end
 `
@@ -347,7 +350,7 @@ iex> defmodule Person do
 ..> end
 ```
 ## The mix tool
-Elixir uses the mix tool to create a default directory structure for our orojects
+Elixir uses the mix tool to create a default directory structure for our projects
 
 ```
 $ mix new test_project
@@ -401,17 +404,18 @@ The
 > To know more about Mix and OTP, read the docs [here](https://hexdocs.pm/mix/Mix.html) 
 
 ## Final Project (Capstone)
-We encourage studnets taking this course to try out what they've learnt and
-We You can complete anyone of the four projcts or open an issue in the [submissions]() repo with the labels - "new" "elixir"
+We encourage students taking this course to try out what they've learnt and
+You can complete any one of the four projects or open an issue in the [submissions]() repo with the labels - "new" "elixir"
 
 ### List of projects
 
 - **Scientific Calculator:** Build a scientific calculator in the command line. The  app should have basic operations and other operations such as logarithms and trignometric functions. ( *Hint*: use case to check user choice of operation
-- **Word Counter:** Count the number of charecters, vowels, consonansts, words and sentences in a given paragraph.
+- **Word Counter:** Count the number of characters, vowels, consonants, words and sentences in a given paragraph.
 - **Bank Statement:** Build a command-line application that takes in a CSV file and outputs a readable bank statement.
-- **Changelog:** Create  a changelog using the elixir command line. It should take titie and description as user inputs and assign timestamps and print a table on calling a a function. 
+- **Changelog:** Create  a changelog using the elixir command line. It should take title and description as user inputs and assign timestamps and print a table on calling a a function. 
 
-> Doing all projects is recommended to get a good understanding of basics.Projects may require research
+> Doing all projects is recommended to get a good understanding of basics
+> Projects may require research
 
 
 #### Evaluation 
@@ -425,14 +429,13 @@ You can also ask to be assigned to a mentor who will guide you through your proj
 [Awesome-Elixir: A curated list of awesome Elixir and Erlang libraries]()
 
 ### What's Next
-- **Advanced Elixir:** The next course contains advanced concepts such as Enum, Streams, Porcesses, file handling, protocols, error handling, comprehensions and sigils.  
+- **Advanced Elixir:** The next course contains advanced concepts such as Enum, Streams, Processes, file handling, protocols, error handling, comprehensions and sigils.  
 
 >This course is optional and is to give a deeper undrstanding of Elixir.
 You can find the course [here]()
 
 - **The Phoenix web framework** As the maintainers put it, [Phoenix](http://phoenixframework.org/) is a "A productive web framework that does not compromise speed and maintainability". They maintain the ideology till date. 
 
-We suggest you take the [Roadmap to Phoenix]() course to undertand using Elixir on the web.
+We suggest you take the [Roadmap to Phoenix]() course to undertand using Elixir to build web applications.
 
 Happy coding!!!
-
