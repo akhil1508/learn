@@ -5,8 +5,11 @@ This is an Introductory course on Elixir. It covers all the basics required  to 
 
 ***Why Elixir***?
 **Scalable:** Elixir is easily scalable.
+
 **Fault-tolerant:**  Enables a system to continue operating properly in the event of the failure of some of its components.
+
 **Functional:** The functional paradigm is really good for many use cases. Elixir is a purely functional programming language. 
+
 **Built on top of the Erlang ecosystem:** Erlang is a mature programming language with a lot of libraries. Extending your Elixir project with these libraries is very easy.
 
 
@@ -26,7 +29,7 @@ The current community at Coderplex is limited to 3 people - [@anandpotukuchi](ht
 
 #### Course Details
 
-Level : Advanced
+Level : Beginner
 Written By: [Anand Potukuchi](http://www.github.com/anandpotukchi)
 Maintained By: [Anand Potukuchi](http://www.github.com/anandpotukchi)
 

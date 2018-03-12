@@ -1,7 +1,7 @@
 # Roadmap to Elixir
 ### Part II
 # Preface
-This course is an advanced course on the Elixir programming language. It's designed for one with a  a basic understanding of the language and want to know more of the language's many hidden goodies. 
+This course is an advanced course on the Elixir programming language. It's designed for people with a  basic understanding of the language and want to know more of the language's many hidden goodies. 
 ## Course Details
 **Level:** Advanced 
 Written By: [Anand Potukuchi](http://www.github.com/anandpotukchi)
@@ -11,10 +11,10 @@ Maintained By: [Anand Potukuchi](http://www.github.com/anandpotukchi)
 ## Curriculum
 
 ### Prerequisites
-This course assumes that you have command over basic Elixir syntax or have taken the Roadmap to [Elixir Part I]()
+This course assumes that you have good command over basic Elixir syntax or have taken the Roadmap to [Elixir Part I]()
 
-## Enum and Streams
-Enumerables are datab types w1hich map a value to a key. Two enumeables which we have used in the past are maps and lists. The **Enum** module lets  perform various operations such as sort, group and filter amonng others.
+## Enums and Streams
+Enumerables are data types which map a value to a key. Two enumerables that we have used in the past are maps and lists. The **Enum** module lets  perform various operations such as sort, group and filter amonng others.
 
 |Concept | Resource | Prerequisite |
 |-----| ----|----------|
@@ -26,7 +26,7 @@ What if someone nests functions like:
 
 F(w(z(y(x))))
 
-It is often confusing to undrrstand this, terefore we use the pipe operator.
+It is often confusing to understand this, therefore we use the pipe operator.
 
 In mathematics, we evaluate the expression from the innermost to the outermost.
 
@@ -35,11 +35,11 @@ In Elixir, we use the pipe operator to make it  simpler to evaluate complex func
 f(x) |> f(y) |> f(z) |> f(w)
 
 
-The pipe operator takes in the output of one statement and passes it on to the next. 
+The pipe operator takes in the output of one statement and passes it on to the next as the first argument. 
 
 ### Processes 
 
-Each instruction issued to the compiler is treated as process. 
+Each instruction issued to the compiler is treated as a process. 
 
 Benefits of Elixir:
 
